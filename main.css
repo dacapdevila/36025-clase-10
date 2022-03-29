@@ -1,0 +1,64 @@
+.grid {
+    display: grid;
+    grid-template-areas:
+      "nav header header"
+      "nav productos publicidad"
+      "nav servicios publicidad"
+      "nav footer footer";
+    grid-template-rows: 100px 1fr 1fr 75px;
+    grid-template-columns: 20% auto 15%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: 100vh;
+    margin: 0;
+  }
+
+.border {
+    border: 1px solid yellow;
+    background-color: red;
+}
+
+header {
+    grid-area: header;
+  }
+  
+  footer {
+    grid-area: footer;
+  }
+  
+  section#productos {
+    grid-area: productos;
+  }
+  
+  section#servicios {
+    grid-area: servicios;
+  }
+  
+  nav {
+    grid-area: nav;
+  }
+  
+  aside {
+    grid-area: publicidad;
+  }
+
+
+@media screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .border {
+        border: 4px solid black;
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+	    .grid {
+            grid-template-columns: repeat(3, 1fr);
+      }
+      .border {
+    	border: 4px solid black;
+    	background-color: green;
+     }
+}
